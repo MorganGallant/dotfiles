@@ -31,7 +31,7 @@ if [[ $machine == "macos" ]] && [[ $(command -v brew) == "" ]]; then
     # Now we can instal Homebrew.
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-else
+elif [[ $machine == "macos" ]]; then
     # Just do a basic update if we've already installed Homebrew.
     echo "Updating Homebrew..."
     brew update
