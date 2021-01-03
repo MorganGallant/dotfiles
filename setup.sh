@@ -69,7 +69,8 @@ echo "Finished core tooling installation."
 
 # If we are on macOS, we need to do some additional setup for Go.
 if [[ $machine == "macos" ]]; then
-    echo "export GOROOT=/usr/local/go" >> ~/.zshrc
+    gv=`brew ls --versions golang | cut -d " " -f 2`
+    echo "export GOROOT=/usr/local/Cellar/go/$gv/libexec" >> ~/.zshrc
     echo "export GOPATH=\$HOME/go" >> ~/.zshrc
     echo "export PATH=\$PATH:\$GOROOT/bin:\$GOPATH/bin" >> ~/.zshrc
     source ~/.zshrc
