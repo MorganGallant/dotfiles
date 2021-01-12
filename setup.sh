@@ -57,6 +57,7 @@ if [[ $machine == "macos" ]]; then
     smart_brew sqlc
     smart_brew protobuf
     smart_brew clang-format
+    smart_brew gpg
     brew cleanup
 else
     sudo yum install vim -y
